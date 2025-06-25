@@ -1,0 +1,8 @@
+9782070368228;Le Petit Prince;Antoine de Saint-Exupéry;1943;Fiction;emprunté
+9780132350884;Clean Code;Robert C. Martin;2008;Informatique;disponible
+9780262033848;Introduction to Algorithms;Thomas H. Cormen;2009;Informatique;emprunté
+9781982137274;The Midnight Library;Matt Haig;2020;Roman;emprunté
+9782266276167;La Vie devant soi;Romain Gary;1975;Drame;disponible
+9782266276067;La Vie devant soi;Romain Gary;1975;Drame;disponible
+2001;moi;yoi;2004;mom;disponible
+1;1;1;1000;1;emprunté
