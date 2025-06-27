@@ -3,6 +3,7 @@ from exceptions import *
 from visualisations import *
 
 bib = Bibliotheque()
+
 def menu():
     while True:
         print("\n==== GESTION BIBLIOTHEQUE ====")
@@ -18,7 +19,7 @@ def menu():
 
         try:
             match choice:
-                case "1":
+                case "1": #Ajouter un livre
                     isbn = input("ISBN : ")
                     titre = input("Titre : ")
                     auteur = input("Auteur : ")
@@ -27,41 +28,41 @@ def menu():
                     bib.ajouter_livre(Livre(isbn, titre, auteur, annee, genre))
                     bib.sauvegarder_donnees()
                     
-                case "2":
+                case "2": #Supprimer un livre
                     isbn = input("ISBN du livre à supprimer : ")
                     bib.supprimer_livre(isbn)
                     bib.sauvegarder_donnees()
                     
-                case "3":
+                case "3": #Inscrire un membre
                     id_membre = input("ID : ")
                     nom = input("Nom : ")
                     bib.enregistrer_membre(Membre(id_membre, nom))
                     bib.sauvegarder_donnees()
                     
-                case "4":
+                case "4": #Emprunter un livre
                     id_membre = input("ID Membre : ")
                     isbn = input("ISBN Livre : ")
                     bib.emprunter_livre(isbn, id_membre)
                     bib.sauvegarder_donnees()
                     
-                case "5":
+                case "5": #Rendre un livre
                     id_membre = input("ID Membre : ")
                     isbn = input("ISBN Livre : ")
                     bib.retourner_livre(isbn, id_membre)
                     bib.sauvegarder_donnees()
                     
-                case "6":
+                case "6": #Lister tous les livres
                     bib.lister_livres()
 
-                case "7":
+                case "7": #Afficher les statistiques
                     print("📋 Affichage des statistiques en cours...")
                     #call all
                     graphique_genre(bib.livres)
-                    top_auteurs(bib.livres)
+                    top_auteurs("data/historique.csv", bib.livres)
                     courbe_activite()
                     plt.show()
 
-                case "8":
+                case "8": #Sauvegarder et quitter
                     print("💾 Données sauvegardées avec succès")
                     break #pas besoin de sauvegarder les donnes (deja sauvegardees)
 

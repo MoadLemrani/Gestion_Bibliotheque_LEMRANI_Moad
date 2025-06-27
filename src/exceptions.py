@@ -14,6 +14,10 @@ class LivreInexistantError(Exception) :
     def __init__(self, message = "Le livre spécifié n'existe pas") : 
         super().__init__(message)
 
-class LivreDejaDisponibleError(Exception):
-    def __init__(self, message="Le livre est déjà disponible. il ne peut pas être retourné"):
+class LivreDejaEmprunteError(Exception):
+    def __init__(self, message="Le livre est emprunté. il ne peut pas être supprimé"):
+        super().__init__(message)
+
+class LivreNonEmprunteParCeMembreError(Exception):
+    def __init__(self, message="Le livre n'est pas emprunté par ce membre. il ne peut pas être retourné"):
         super().__init__(message)

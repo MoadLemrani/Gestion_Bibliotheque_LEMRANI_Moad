@@ -1,0 +1,4 @@
+# Bibliothèques nécessaires pour le projet "Gestion de Bibliothèque"
+# Génération de graphiques et visualisations statistiques
+python>=3.13.1
+matplotlib>=3.10.3

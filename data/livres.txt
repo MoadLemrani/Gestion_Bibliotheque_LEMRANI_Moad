@@ -1,8 +1,12 @@
-9782070368228;Le Petit Prince;Antoine de Saint-Exup�ry;1943;Fiction;emprunt�
-9780132350884;Clean Code;Robert C. Martin;2008;Informatique;disponible
-9780262033848;Introduction to Algorithms;Thomas H. Cormen;2009;Informatique;emprunt�
-9781982137274;The Midnight Library;Matt Haig;2020;Roman;emprunt�
-9782266276167;La Vie devant soi;Romain Gary;1975;Drame;disponible
-9782266276067;La Vie devant soi;Romain Gary;1975;Drame;disponible
-2001;moi;yoi;2004;mom;disponible
-1;1;1;1000;1;emprunt�
+1;1;Antoine de Saint-Exupéry;1111;Roman;emprunté
+2;2;George Orwell;2000;Littérature jeunesse;emprunté
+3;3;Robert C. Martin;1111;Roman;emprunté
+4;4;J.K. Rowling;2000;Science-fiction;emprunté
+5;5;Gabriel García Márquez;2000;Roman;emprunté
+6;6;Jane Austen;2000;Science-fiction;emprunté
+7;7;Agatha Christie;2000;Roman;emprunté
+8;8;Victor Hugo;2000;Biographie;emprunté
+9;9;Paulo Coelho;900;Biographie;emprunté
+0;0;Charles Dickens;2000;Littérature jeunesse;emprunté
+10;10;Franz Kafka;1000;Littérature jeunesse;emprunté
+11;11;Mark Twain;1111;Théâtre;disponible

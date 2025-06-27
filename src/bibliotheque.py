@@ -35,24 +35,6 @@ class Livre:
         isbn, titre, auteur, annee, genre, statut = txt.strip().split(";") #strip pour ignorer le vide
         return Livre(isbn,titre,auteur,annee,genre,statut)
     
-    #getters
-    def get_isbn(self):
-        return self.isbn
-
-    def get_titre(self):
-        return self.titre
-
-    def get_auteur(self):
-        return self.auteur
-
-    def get_annee(self):
-        return self.annee
-
-    def get_genre(self):
-        return self.genre
-
-    def get_statut(self):
-        return self.statut
 
 class Membre:
 
@@ -94,7 +76,7 @@ class Bibliotheque:
         self.membres = []
         self.charger_donnees()
 
-    #enregistrement d'un livre
+    #ajout d'un livre
     def ajouter_livre(self,livre):
         for l in self.livres:
             if l.isbn == livre.isbn:
@@ -104,7 +86,9 @@ class Bibliotheque:
 
     #suppression d'un livre
     def supprimer_livre(self,isbn):
-        self.trouver_livre(isbn)
+        livre = self.trouver_livre(isbn)
+        if livre.statut == "emprunté" :
+            raise LivreDejaEmprunteError()
         nouvelle_liste = []
         for l in self.livres:
             if l.isbn != isbn:
@@ -140,8 +124,8 @@ class Bibliotheque:
         livre = self.trouver_livre(isbn)
         membre = self.trouver_membre(id_membre)
 
-        if livre.statut == "disponible":
-            raise LivreDejaDisponibleError()
+        if isbn not in membre.livres_empruntes:
+            raise LivreNonEmprunteParCeMembreError()
     
         if isbn in membre.livres_empruntes:
             membre.livres_empruntes.remove(isbn)
@@ -192,7 +176,7 @@ class Bibliotheque:
     #charger les donnes des fichiers .txt
     def charger_donnees(self):
         if os.path.exists("data/livres.txt"):
-            with open("data/livres.txt", encoding="windows-1252") as f:#eviter que les cara comme é deviennent illisibles
+            with open("data/livres.txt", encoding="UTF-8") as f:#eviter que les cara comme é deviennent illisibles
                 livres = []
                 for l in f:
                     if l.strip():
@@ -200,7 +184,7 @@ class Bibliotheque:
                         livres.append(livre)
                 self.livres = livres
         if os.path.exists("data/membres.txt"):
-            with open("data/membres.txt", encoding="windows-1252") as f:
+            with open("data/membres.txt", encoding="UTF-8") as f:
                 membres = []
                 for l in f:
                     if l.strip():
