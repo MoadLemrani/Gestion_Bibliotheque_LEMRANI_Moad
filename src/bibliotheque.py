@@ -166,10 +166,10 @@ class Bibliotheque:
 
     #sauvegarder les donnes dans des fichiers .txt
     def sauvegarder_donnees(self):
-        with open("data/livres.txt","w") as f:
+        with open("data/livres.txt","w",encoding="utf-8") as f: #Always specify encoding explicitly when writing
             for livre in self.livres:
                 f.write(livre.object_to_txt() + "\n")
-        with open("data/membres.txt","w") as f:
+        with open("data/membres.txt","w",encoding="utf-8") as f:
             for membre in self.membres:
                 f.write(membre.object_to_txt() + "\n")
     
