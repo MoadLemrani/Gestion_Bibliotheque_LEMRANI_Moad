@@ -1,12 +1,1 @@
-1;1;Antoine de Saint-Exupéry;1111;Roman;emprunté
-2;2;George Orwell;2000;Littérature jeunesse;emprunté
-3;3;Robert C. Martin;1111;Roman;emprunté
-4;4;J.K. Rowling;2000;Science-fiction;emprunté
-5;5;Gabriel García Márquez;2000;Roman;emprunté
-6;6;Jane Austen;2000;Science-fiction;emprunté
-7;7;Agatha Christie;2000;Roman;emprunté
-8;8;Victor Hugo;2000;Biographie;emprunté
-9;9;Paulo Coelho;900;Biographie;emprunté
-0;0;Charles Dickens;2000;Littérature jeunesse;emprunté
-10;10;Franz Kafka;1000;Littérature jeunesse;emprunté
-11;11;Mark Twain;1111;Théâtre;disponible
+1;alice in bordelands;moad;2004;fiction;emprunt�
