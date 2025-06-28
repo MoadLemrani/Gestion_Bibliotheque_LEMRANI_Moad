@@ -194,6 +194,6 @@ class Bibliotheque:
     
     #sauvegarder les actions (emprunts)
     def enregistrer_action(self,isbn,id_membre,action):
-        with open("data/historique.csv", "a") as f:
+        with open("data/historique.csv", "a",encoding="UTF-8") as f: #Always specify encoding explicitly
             date = datetime.now().strftime("%d-%m-%Y")
             f.write(f"{date};{isbn};{id_membre};{action}\n")
