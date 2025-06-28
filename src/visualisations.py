@@ -17,6 +17,7 @@ def graphique_genre(livres):
     plt.figure("Répartition des livres par genre")
     plt.pie(counts.values(), labels=counts.keys(), autopct='%1.1f%%')
     plt.title("Répartition des livres par genre")
+    plt.savefig("assets/Répartition_des_livres_par_genre.png")
 
 #Histogramme : Top 10 des auteurs les plus populaires
 def top_auteurs(fichier_historique, livres):
@@ -63,6 +64,7 @@ def top_auteurs(fichier_historique, livres):
     plt.title("Top 10 des auteurs les plus empruntés")
     plt.ylabel("Nombre d'emprunts")
     plt.tight_layout()
+    plt.savefig("assets/Top_auteurs.png")
 
 
 #Courbe temporelle : Activité des emprunts (30 derniers jours)
@@ -100,3 +102,4 @@ def courbe_activite():
     plt.ylim(0, max(y) + 1)
 
     plt.tight_layout()
+    plt.savefig("assets/Activité_des_emprunts.png")
