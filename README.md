@@ -64,3 +64,9 @@ python src/main.py
 - Nombre de livres par genre
 - Top 10 des auteurs les plus empruntés
 - Activité des emprunts sur les 30 derniers jours
+
+### 📄 Remplissage des fichiers de données
+
+> ⚠️ **Important** : Ne modifiez pas manuellement les fichiers `livres.txt`, `membres.txt` ou `historique.csv`.  
+> Cela peut provoquer des erreurs d'encodage (`UnicodeDecodeError`) lors du chargement des données.
+
